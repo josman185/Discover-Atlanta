@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Discover-Atlanta.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8047E0871DBFB22C00AA8D62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8047E09E1DBFB22C00AA8D62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8047E0A91DBFB22C00AA8D62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

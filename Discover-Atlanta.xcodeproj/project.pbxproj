@@ -1,0 +1,729 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C0832D5BE933A01719CAF09 /* libPods-Discover-Atlanta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57775DB260B622EBEA876B8D /* libPods-Discover-Atlanta.a */; };
+		802F18B11DC8E065002D040F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802F18B01DC8E065002D040F /* WebViewController.swift */; };
+		802F18B31DC8F19F002D040F /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802F18B21DC8F19F002D040F /* FavoritesViewController.swift */; };
+		802F18B51DC8F315002D040F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802F18B41DC8F315002D040F /* CoreDataManager.swift */; };
+		802F18B71DC91D29002D040F /* CustomCell-Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802F18B61DC91D29002D040F /* CustomCell-Favorites.swift */; };
+		8047E08C1DBFB22C00AA8D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E08B1DBFB22C00AA8D62 /* AppDelegate.swift */; };
+		8047E08E1DBFB22C00AA8D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E08D1DBFB22C00AA8D62 /* ViewController.swift */; };
+		8047E0911DBFB22C00AA8D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8047E08F1DBFB22C00AA8D62 /* Main.storyboard */; };
+		8047E0941DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8047E0921DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodeld */; };
+		8047E0961DBFB22C00AA8D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8047E0951DBFB22C00AA8D62 /* Assets.xcassets */; };
+		8047E0991DBFB22C00AA8D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8047E0971DBFB22C00AA8D62 /* LaunchScreen.storyboard */; };
+		8047E0A41DBFB22C00AA8D62 /* Discover_AtlantaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E0A31DBFB22C00AA8D62 /* Discover_AtlantaTests.swift */; };
+		8047E0AF1DBFB22C00AA8D62 /* Discover_AtlantaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E0AE1DBFB22C00AA8D62 /* Discover_AtlantaUITests.swift */; };
+		8047E0C11DC0FB0100AA8D62 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E0C01DC0FB0100AA8D62 /* MainTableVC.swift */; };
+		8047E0C31DC1048B00AA8D62 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E0C21DC1048B00AA8D62 /* TabBarViewController.swift */; };
+		8047E0C51DC107FB00AA8D62 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E0C41DC107FB00AA8D62 /* LogOutViewController.swift */; };
+		8047E0C91DC1701700AA8D62 /* dataSource.json in Resources */ = {isa = PBXBuildFile; fileRef = 8047E0C81DC1701700AA8D62 /* dataSource.json */; };
+		8047E0CE1DC17EFD00AA8D62 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E0CD1DC17EFD00AA8D62 /* Place.swift */; };
+		8047E0D01DC1B27400AA8D62 /* ParseFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8047E0CF1DC1B27400AA8D62 /* ParseFile.swift */; };
+		805267F61DC9899D0050771F /* MapViewTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805267F51DC9899D0050771F /* MapViewTabBarViewController.swift */; };
+		805A55011DC2EDB0004DC94D /* CustomCell-MainTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A55001DC2EDB0004DC94D /* CustomCell-MainTable.swift */; };
+		805A55031DC410E6004DC94D /* not_found-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 805A55021DC410E6004DC94D /* not_found-1.jpg */; };
+		805A55051DC540D1004DC94D /* DetailMainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A55041DC540D1004DC94D /* DetailMainTableVC.swift */; };
+		805A55071DC59411004DC94D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A55061DC59411004DC94D /* MapViewController.swift */; };
+		805A55091DC7AA26004DC94D /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A55081DC7AA26004DC94D /* VideoViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8047E0A01DBFB22C00AA8D62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8047E0801DBFB22B00AA8D62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8047E0871DBFB22C00AA8D62;
+			remoteInfo = "Discover-Atlanta";
+		};
+		8047E0AB1DBFB22C00AA8D62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8047E0801DBFB22B00AA8D62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8047E0871DBFB22C00AA8D62;
+			remoteInfo = "Discover-Atlanta";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57775DB260B622EBEA876B8D /* libPods-Discover-Atlanta.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discover-Atlanta.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802F18B01DC8E065002D040F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		802F18B21DC8F19F002D040F /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		802F18B41DC8F315002D040F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		802F18B61DC91D29002D040F /* CustomCell-Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomCell-Favorites.swift"; sourceTree = "<group>"; };
+		8047E0881DBFB22C00AA8D62 /* Discover-Atlanta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Discover-Atlanta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8047E08B1DBFB22C00AA8D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8047E08D1DBFB22C00AA8D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8047E0901DBFB22C00AA8D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8047E0931DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Discover_Atlanta.xcdatamodel; sourceTree = "<group>"; };
+		8047E0951DBFB22C00AA8D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8047E0981DBFB22C00AA8D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8047E09A1DBFB22C00AA8D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8047E09F1DBFB22C00AA8D62 /* Discover-AtlantaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Discover-AtlantaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8047E0A31DBFB22C00AA8D62 /* Discover_AtlantaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover_AtlantaTests.swift; sourceTree = "<group>"; };
+		8047E0A51DBFB22C00AA8D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8047E0AA1DBFB22C00AA8D62 /* Discover-AtlantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Discover-AtlantaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8047E0AE1DBFB22C00AA8D62 /* Discover_AtlantaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover_AtlantaUITests.swift; sourceTree = "<group>"; };
+		8047E0B01DBFB22C00AA8D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8047E0BC1DBFB88E00AA8D62 /* Discover-Atlanta-Brigding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Discover-Atlanta-Brigding-Header.h"; sourceTree = "<group>"; };
+		8047E0BD1DC00A1000AA8D62 /* Discover-Atlanta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Discover-Atlanta.entitlements"; sourceTree = "<group>"; };
+		8047E0C01DC0FB0100AA8D62 /* MainTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
+		8047E0C21DC1048B00AA8D62 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8047E0C41DC107FB00AA8D62 /* LogOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
+		8047E0C81DC1701700AA8D62 /* dataSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dataSource.json; sourceTree = "<group>"; };
+		8047E0CD1DC17EFD00AA8D62 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		8047E0CF1DC1B27400AA8D62 /* ParseFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseFile.swift; sourceTree = "<group>"; };
+		805267F51DC9899D0050771F /* MapViewTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewTabBarViewController.swift; sourceTree = "<group>"; };
+		805A55001DC2EDB0004DC94D /* CustomCell-MainTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomCell-MainTable.swift"; sourceTree = "<group>"; };
+		805A55021DC410E6004DC94D /* not_found-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "not_found-1.jpg"; sourceTree = "<group>"; };
+		805A55041DC540D1004DC94D /* DetailMainTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMainTableVC.swift; sourceTree = "<group>"; };
+		805A55061DC59411004DC94D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		805A55081DC7AA26004DC94D /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		8BC05F9839FE2DF5CFE2677B /* Pods-Discover-Atlanta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discover-Atlanta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discover-Atlanta/Pods-Discover-Atlanta.release.xcconfig"; sourceTree = "<group>"; };
+		E2E7D363CFCD11607CE21BE9 /* Pods-Discover-Atlanta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discover-Atlanta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discover-Atlanta/Pods-Discover-Atlanta.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8047E0851DBFB22C00AA8D62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0832D5BE933A01719CAF09 /* libPods-Discover-Atlanta.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8047E09C1DBFB22C00AA8D62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8047E0A71DBFB22C00AA8D62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2530A63BF132A5CA5559478C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2E7D363CFCD11607CE21BE9 /* Pods-Discover-Atlanta.debug.xcconfig */,
+				8BC05F9839FE2DF5CFE2677B /* Pods-Discover-Atlanta.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8047E07F1DBFB22B00AA8D62 = {
+			isa = PBXGroup;
+			children = (
+				8047E0BC1DBFB88E00AA8D62 /* Discover-Atlanta-Brigding-Header.h */,
+				8047E08A1DBFB22C00AA8D62 /* Discover-Atlanta */,
+				8047E0A21DBFB22C00AA8D62 /* Discover-AtlantaTests */,
+				8047E0AD1DBFB22C00AA8D62 /* Discover-AtlantaUITests */,
+				8047E0891DBFB22C00AA8D62 /* Products */,
+				2530A63BF132A5CA5559478C /* Pods */,
+				E8748B3EA26B192E54E7DE44 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8047E0891DBFB22C00AA8D62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8047E0881DBFB22C00AA8D62 /* Discover-Atlanta.app */,
+				8047E09F1DBFB22C00AA8D62 /* Discover-AtlantaTests.xctest */,
+				8047E0AA1DBFB22C00AA8D62 /* Discover-AtlantaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8047E08A1DBFB22C00AA8D62 /* Discover-Atlanta */ = {
+			isa = PBXGroup;
+			children = (
+				8047E0CC1DC17E7700AA8D62 /* Controllers */,
+				8047E0CB1DC17E3900AA8D62 /* View */,
+				8047E0CA1DC17E2300AA8D62 /* Model */,
+				8047E0BD1DC00A1000AA8D62 /* Discover-Atlanta.entitlements */,
+				8047E09A1DBFB22C00AA8D62 /* Info.plist */,
+			);
+			path = "Discover-Atlanta";
+			sourceTree = "<group>";
+		};
+		8047E0A21DBFB22C00AA8D62 /* Discover-AtlantaTests */ = {
+			isa = PBXGroup;
+			children = (
+				8047E0A31DBFB22C00AA8D62 /* Discover_AtlantaTests.swift */,
+				8047E0A51DBFB22C00AA8D62 /* Info.plist */,
+			);
+			path = "Discover-AtlantaTests";
+			sourceTree = "<group>";
+		};
+		8047E0AD1DBFB22C00AA8D62 /* Discover-AtlantaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8047E0AE1DBFB22C00AA8D62 /* Discover_AtlantaUITests.swift */,
+				8047E0B01DBFB22C00AA8D62 /* Info.plist */,
+			);
+			path = "Discover-AtlantaUITests";
+			sourceTree = "<group>";
+		};
+		8047E0CA1DC17E2300AA8D62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8047E0CD1DC17EFD00AA8D62 /* Place.swift */,
+				805A55001DC2EDB0004DC94D /* CustomCell-MainTable.swift */,
+				8047E0CF1DC1B27400AA8D62 /* ParseFile.swift */,
+				8047E0C81DC1701700AA8D62 /* dataSource.json */,
+				8047E0921DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodeld */,
+				802F18B41DC8F315002D040F /* CoreDataManager.swift */,
+				802F18B61DC91D29002D040F /* CustomCell-Favorites.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8047E0CB1DC17E3900AA8D62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8047E08F1DBFB22C00AA8D62 /* Main.storyboard */,
+				8047E0971DBFB22C00AA8D62 /* LaunchScreen.storyboard */,
+				805A55021DC410E6004DC94D /* not_found-1.jpg */,
+				8047E0951DBFB22C00AA8D62 /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8047E0CC1DC17E7700AA8D62 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8047E08B1DBFB22C00AA8D62 /* AppDelegate.swift */,
+				8047E08D1DBFB22C00AA8D62 /* ViewController.swift */,
+				8047E0C01DC0FB0100AA8D62 /* MainTableVC.swift */,
+				805A55041DC540D1004DC94D /* DetailMainTableVC.swift */,
+				805A55061DC59411004DC94D /* MapViewController.swift */,
+				8047E0C21DC1048B00AA8D62 /* TabBarViewController.swift */,
+				8047E0C41DC107FB00AA8D62 /* LogOutViewController.swift */,
+				805A55081DC7AA26004DC94D /* VideoViewController.swift */,
+				802F18B01DC8E065002D040F /* WebViewController.swift */,
+				802F18B21DC8F19F002D040F /* FavoritesViewController.swift */,
+				805267F51DC9899D0050771F /* MapViewTabBarViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E8748B3EA26B192E54E7DE44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57775DB260B622EBEA876B8D /* libPods-Discover-Atlanta.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8047E0871DBFB22C00AA8D62 /* Discover-Atlanta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8047E0B31DBFB22C00AA8D62 /* Build configuration list for PBXNativeTarget "Discover-Atlanta" */;
+			buildPhases = (
+				74A356CBE61098E093C98CFD /* [CP] Check Pods Manifest.lock */,
+				8047E0841DBFB22C00AA8D62 /* Sources */,
+				8047E0851DBFB22C00AA8D62 /* Frameworks */,
+				8047E0861DBFB22C00AA8D62 /* Resources */,
+				72B3426CA3C6AFEDAB566528 /* [CP] Embed Pods Frameworks */,
+				5599071BD9A8BE06A701E269 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Discover-Atlanta";
+			productName = "Discover-Atlanta";
+			productReference = 8047E0881DBFB22C00AA8D62 /* Discover-Atlanta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8047E09E1DBFB22C00AA8D62 /* Discover-AtlantaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8047E0B61DBFB22C00AA8D62 /* Build configuration list for PBXNativeTarget "Discover-AtlantaTests" */;
+			buildPhases = (
+				8047E09B1DBFB22C00AA8D62 /* Sources */,
+				8047E09C1DBFB22C00AA8D62 /* Frameworks */,
+				8047E09D1DBFB22C00AA8D62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8047E0A11DBFB22C00AA8D62 /* PBXTargetDependency */,
+			);
+			name = "Discover-AtlantaTests";
+			productName = "Discover-AtlantaTests";
+			productReference = 8047E09F1DBFB22C00AA8D62 /* Discover-AtlantaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8047E0A91DBFB22C00AA8D62 /* Discover-AtlantaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8047E0B91DBFB22C00AA8D62 /* Build configuration list for PBXNativeTarget "Discover-AtlantaUITests" */;
+			buildPhases = (
+				8047E0A61DBFB22C00AA8D62 /* Sources */,
+				8047E0A71DBFB22C00AA8D62 /* Frameworks */,
+				8047E0A81DBFB22C00AA8D62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8047E0AC1DBFB22C00AA8D62 /* PBXTargetDependency */,
+			);
+			name = "Discover-AtlantaUITests";
+			productName = "Discover-AtlantaUITests";
+			productReference = 8047E0AA1DBFB22C00AA8D62 /* Discover-AtlantaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8047E0801DBFB22B00AA8D62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = myOrganization;
+				TargetAttributes = {
+					8047E0871DBFB22C00AA8D62 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NHW96578YG;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					8047E09E1DBFB22C00AA8D62 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8047E0871DBFB22C00AA8D62;
+					};
+					8047E0A91DBFB22C00AA8D62 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8047E0871DBFB22C00AA8D62;
+					};
+				};
+			};
+			buildConfigurationList = 8047E0831DBFB22B00AA8D62 /* Build configuration list for PBXProject "Discover-Atlanta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8047E07F1DBFB22B00AA8D62;
+			productRefGroup = 8047E0891DBFB22C00AA8D62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8047E0871DBFB22C00AA8D62 /* Discover-Atlanta */,
+				8047E09E1DBFB22C00AA8D62 /* Discover-AtlantaTests */,
+				8047E0A91DBFB22C00AA8D62 /* Discover-AtlantaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8047E0861DBFB22C00AA8D62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8047E0991DBFB22C00AA8D62 /* LaunchScreen.storyboard in Resources */,
+				8047E0961DBFB22C00AA8D62 /* Assets.xcassets in Resources */,
+				8047E0911DBFB22C00AA8D62 /* Main.storyboard in Resources */,
+				8047E0C91DC1701700AA8D62 /* dataSource.json in Resources */,
+				805A55031DC410E6004DC94D /* not_found-1.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8047E09D1DBFB22C00AA8D62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8047E0A81DBFB22C00AA8D62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5599071BD9A8BE06A701E269 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Discover-Atlanta/Pods-Discover-Atlanta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B3426CA3C6AFEDAB566528 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Discover-Atlanta/Pods-Discover-Atlanta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74A356CBE61098E093C98CFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8047E0841DBFB22C00AA8D62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802F18B71DC91D29002D040F /* CustomCell-Favorites.swift in Sources */,
+				805A55071DC59411004DC94D /* MapViewController.swift in Sources */,
+				8047E0C51DC107FB00AA8D62 /* LogOutViewController.swift in Sources */,
+				802F18B31DC8F19F002D040F /* FavoritesViewController.swift in Sources */,
+				802F18B51DC8F315002D040F /* CoreDataManager.swift in Sources */,
+				805A55091DC7AA26004DC94D /* VideoViewController.swift in Sources */,
+				8047E08E1DBFB22C00AA8D62 /* ViewController.swift in Sources */,
+				805A55011DC2EDB0004DC94D /* CustomCell-MainTable.swift in Sources */,
+				8047E08C1DBFB22C00AA8D62 /* AppDelegate.swift in Sources */,
+				805267F61DC9899D0050771F /* MapViewTabBarViewController.swift in Sources */,
+				8047E0C11DC0FB0100AA8D62 /* MainTableVC.swift in Sources */,
+				8047E0C31DC1048B00AA8D62 /* TabBarViewController.swift in Sources */,
+				8047E0D01DC1B27400AA8D62 /* ParseFile.swift in Sources */,
+				805A55051DC540D1004DC94D /* DetailMainTableVC.swift in Sources */,
+				8047E0CE1DC17EFD00AA8D62 /* Place.swift in Sources */,
+				802F18B11DC8E065002D040F /* WebViewController.swift in Sources */,
+				8047E0941DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8047E09B1DBFB22C00AA8D62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8047E0A41DBFB22C00AA8D62 /* Discover_AtlantaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8047E0A61DBFB22C00AA8D62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8047E0AF1DBFB22C00AA8D62 /* Discover_AtlantaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8047E0A11DBFB22C00AA8D62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8047E0871DBFB22C00AA8D62 /* Discover-Atlanta */;
+			targetProxy = 8047E0A01DBFB22C00AA8D62 /* PBXContainerItemProxy */;
+		};
+		8047E0AC1DBFB22C00AA8D62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8047E0871DBFB22C00AA8D62 /* Discover-Atlanta */;
+			targetProxy = 8047E0AB1DBFB22C00AA8D62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8047E08F1DBFB22C00AA8D62 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8047E0901DBFB22C00AA8D62 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8047E0971DBFB22C00AA8D62 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8047E0981DBFB22C00AA8D62 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8047E0B11DBFB22C00AA8D62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8047E0B21DBFB22C00AA8D62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8047E0B41DBFB22C00AA8D62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2E7D363CFCD11607CE21BE9 /* Pods-Discover-Atlanta.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Discover-Atlanta/Discover-Atlanta.entitlements";
+				DEVELOPMENT_TEAM = NHW96578YG;
+				INFOPLIST_FILE = "Discover-Atlanta/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myorganization.Discover-Atlanta";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Discover-Atlanta-Brigding-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8047E0B51DBFB22C00AA8D62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC05F9839FE2DF5CFE2677B /* Pods-Discover-Atlanta.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Discover-Atlanta/Discover-Atlanta.entitlements";
+				DEVELOPMENT_TEAM = NHW96578YG;
+				INFOPLIST_FILE = "Discover-Atlanta/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myorganization.Discover-Atlanta";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Discover-Atlanta-Brigding-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8047E0B71DBFB22C00AA8D62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Discover-AtlantaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myorganization.Discover-AtlantaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Discover-Atlanta.app/Discover-Atlanta";
+			};
+			name = Debug;
+		};
+		8047E0B81DBFB22C00AA8D62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Discover-AtlantaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myorganization.Discover-AtlantaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Discover-Atlanta.app/Discover-Atlanta";
+			};
+			name = Release;
+		};
+		8047E0BA1DBFB22C00AA8D62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Discover-AtlantaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myorganization.Discover-AtlantaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Discover-Atlanta";
+			};
+			name = Debug;
+		};
+		8047E0BB1DBFB22C00AA8D62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Discover-AtlantaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myorganization.Discover-AtlantaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Discover-Atlanta";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8047E0831DBFB22B00AA8D62 /* Build configuration list for PBXProject "Discover-Atlanta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8047E0B11DBFB22C00AA8D62 /* Debug */,
+				8047E0B21DBFB22C00AA8D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8047E0B31DBFB22C00AA8D62 /* Build configuration list for PBXNativeTarget "Discover-Atlanta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8047E0B41DBFB22C00AA8D62 /* Debug */,
+				8047E0B51DBFB22C00AA8D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8047E0B61DBFB22C00AA8D62 /* Build configuration list for PBXNativeTarget "Discover-AtlantaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8047E0B71DBFB22C00AA8D62 /* Debug */,
+				8047E0B81DBFB22C00AA8D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8047E0B91DBFB22C00AA8D62 /* Build configuration list for PBXNativeTarget "Discover-AtlantaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8047E0BA1DBFB22C00AA8D62 /* Debug */,
+				8047E0BB1DBFB22C00AA8D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8047E0921DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8047E0931DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodel */,
+			);
+			currentVersion = 8047E0931DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodel */;
+			path = Discover_Atlanta.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8047E0801DBFB22B00AA8D62 /* Project object */;
+}
