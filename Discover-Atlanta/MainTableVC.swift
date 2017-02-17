@@ -3,7 +3,7 @@
 //  Discover-Atlanta
 //
 //  Created by jos on 10/26/16.
-//  Copyright © 2016 myOrganization. All rights reserved.
+//  Copyright © 2016 myOrganization. All rights reserved.  
 //
 
 import UIKit
