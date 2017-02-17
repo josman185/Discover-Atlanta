@@ -17,35 +17,22 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if (FBSDKAccessToken.current()) != nil {
-            let TabBarVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController")
-                self.present(TabBarVC!, animated: true, completion: nil)
-            //print("Token: \(currenttoken)")
-        }
-        
+
         self.view.addSubview(loginButton)
         loginButton.center = self.view.center
         loginButton.delegate = self
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        // to know weather user is logged in or out
-//        if (FBSDKAccessToken.current()) != nil{
-//            fetchProfile()
-//            print("user currently loogged in")
-//            let TabBarVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController")
-//            self.present(TabBarVC!, animated: true, completion: nil)
-//        }else {
-//            print("user is not logged in")
-//        }
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        // to know weather user is logged in or out
+        IfUserIsLoggedInSendToMainTab()
+    }
     
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         //print("user just logged in")
         let TabBarVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController")
-        self.present(TabBarVC!, animated: true, completion: nil)
+        self.present(TabBarVC!, animated: false, completion: nil)
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
@@ -59,6 +46,16 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func IfUserIsLoggedInSendToMainTab(){
+        if (FBSDKAccessToken.current()) != nil{
+            print("user currently loogged in")
+            let TabBarVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarViewController")
+            self.present(TabBarVC!, animated: false, completion: nil)
+        }else {
+            print("user is not logged in")
+        }
     }
     
 }

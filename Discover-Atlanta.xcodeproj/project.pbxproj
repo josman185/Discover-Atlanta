@@ -180,10 +180,10 @@
 		8047E0CA1DC17E2300AA8D62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8047E0CD1DC17EFD00AA8D62 /* Place.swift */,
 				805A55001DC2EDB0004DC94D /* CustomCell-MainTable.swift */,
 				8047E0CF1DC1B27400AA8D62 /* ParseFile.swift */,
 				8047E0C81DC1701700AA8D62 /* dataSource.json */,
+				8047E0CD1DC17EFD00AA8D62 /* Place.swift */,
 				8047E0921DBFB22C00AA8D62 /* Discover_Atlanta.xcdatamodeld */,
 				802F18B41DC8F315002D040F /* CoreDataManager.swift */,
 				802F18B61DC91D29002D040F /* CustomCell-Favorites.swift */,

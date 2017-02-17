@@ -25,7 +25,7 @@ class DetailMainTableVC: UIViewController {
         
         if (rowInfo?.urlToImage! != nil) {
             DispatchQueue.global(qos: .userInitiated).async {
-                let img = Downloader.downloadImageWithURL(self.rowInfo?.urlToImage!)
+                let img = ImageDownloader.withURL(self.rowInfo?.urlToImage!)
                 DispatchQueue.main.async {
                     self.imageDetailLbl.image = img
                 }
@@ -62,11 +62,15 @@ class DetailMainTableVC: UIViewController {
     }
     
 }
-
+/*
 class Downloader {
     
     class func downloadImageWithURL(_ url:String?) -> UIImage! {
-        let data = try? Data(contentsOf: URL(string: url!)!)
-        return UIImage(data: data!)
+        
+        
+        
+        //let data = try? Data(contentsOf: URL(string: url!)!)
+        //return UIImage(data: data!)
     }
 }
+*/

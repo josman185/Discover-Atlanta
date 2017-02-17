@@ -17,8 +17,8 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = editButtonItem
-        navigationItem.rightBarButtonItem?.action = #selector(showingDeleteButtons)
+        navigationItem.leftBarButtonItem = self.editButtonItem
+        navigationItem.leftBarButtonItem?.action = #selector(showingDeleteButtons)
         updateFavoritePlacesTable()
     }
 
@@ -67,8 +67,10 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     func showingDeleteButtons(){
         if (!favoritesTableView.isEditing){
             favoritesTableView.setEditing(true, animated: true)
+            self.navigationItem.leftBarButtonItem!.title = "Done"
         }else{
             favoritesTableView.setEditing(false, animated: true)
+            self.navigationItem.leftBarButtonItem!.title = "Edit"
         }
     }
     
@@ -81,6 +83,20 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
             favoritePlacesArray.remove(at: indexPath.row)
             favoritesTableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let itemToMove = favoritePlacesArray[sourceIndexPath.row]
+        favoritePlacesArray.remove(at: sourceIndexPath.row)
+        favoritePlacesArray.insert(itemToMove, at: destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     // MARK: - Navigation

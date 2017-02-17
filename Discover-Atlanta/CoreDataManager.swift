@@ -12,7 +12,7 @@ import CoreData
 class CoreDataManager: NSObject {
     
     // Save Data
-    class func saveFavoritePlace(name:String, address:String, imageURL:String, latitude:String, longitude:String, urlToVideo: String, webUrl: String, description:String){
+    class func saveFavoritePlace(name:String, address:String, imageURL:String, latitude:String, longitude:String, urlToVideo: String, webUrl: String, description:String, shortDesc: String){
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -26,11 +26,13 @@ class CoreDataManager: NSObject {
         place.setValue(urlToVideo, forKey: "urlToVideo")
         place.setValue(webUrl, forKey: "webUrl")
         place.setValue(description, forKey: "descriptionPlace")
+        place.setValue(shortDesc, forKey: "shortDesc")
+        
         do{
             try managedContext.save()
             print("Fovorite Place Saved succesfully")
         }catch{
-            print("could not save Fovorite New")
+            print("Could'n save Fovorite Place")
         }
     }
     
@@ -56,8 +58,9 @@ class CoreDataManager: NSObject {
                 guard let placeUrlToVideo = place.value(forKey: "urlToVideo") as? String else { continue }
                 guard let placeWebUrl = place.value(forKey: "webUrl") as? String else { continue }
                 guard let placeDesc = place.value(forKey: "descriptionPlace") as? String else { continue }
+                guard let placeShortDesc = place.value(forKey: "shortDesc") as? String else { continue }
                 //output.append((placeName,placeAddress, placeImageURL))
-                let newplace = Place(name: placeName, latitude: placeLat, longitude: placeLon, url: placeWebUrl, urlToImage: placeImageURL, address: placeAddress, description: placeDesc, urlToVideo: placeUrlToVideo)
+                let newplace = Place(name: placeName, latitude: placeLat, longitude: placeLon, url: placeWebUrl, urlToImage: placeImageURL, address: placeAddress, shortDesc: placeShortDesc, description: placeDesc, urlToVideo: placeUrlToVideo)
                 output.append(newplace)
             }
             
@@ -89,4 +92,27 @@ class CoreDataManager: NSObject {
             print("Could not find place \(Name) \(address)")
         }
     }
+    
+    // check if element exist
+    class func checkIfExist(Name: String, address: String) -> Bool {
+        var myReturn : Bool?
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let predicate = NSPredicate(format: "name=%@ and address=%@", argumentArray: [Name, address])
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavoritePlaces")
+        fetchRequest.predicate = predicate
+        
+        do {
+            let fetchResults = try managedContext.fetch(fetchRequest)
+            if fetchResults.count > 0 {
+                myReturn = true
+            }else {
+                myReturn = false
+            }
+        }catch{
+            print("something went wrong")
+        }
+        return myReturn!
+    }
+    
 }

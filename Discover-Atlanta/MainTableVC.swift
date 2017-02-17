@@ -34,6 +34,10 @@ class MainTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //make dynamic table
+        maintableView.rowHeight = UITableViewAutomaticDimension
+        maintableView.estimatedRowHeight = 140
+        
         // SearchBar Config
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -77,10 +81,10 @@ class MainTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
         cell.nameLbl.text = place.name!
         cell.addressLbl.text = place.address!
-        cell.descriptionLbl.text = place.description!
+        cell.descriptionLbl.text = place.shortDesc!
         if place.urlToImage != nil {
             DispatchQueue.global(qos: .userInitiated).async{
-                let img = Downloader.downloadImageWithURL(place.urlToImage)
+                let img = ImageDownloader.withURL(place.urlToImage)
                 DispatchQueue.main.async{
                     cell.imageLBl.image = img
                 }
@@ -95,7 +99,7 @@ class MainTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     
-    //Navigation
+    //NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToTableDetail" {
             if let indexPath = maintableView.indexPathForSelectedRow {
@@ -127,17 +131,27 @@ class MainTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             let placeUrlToVideo = place.urlToVideo!
             let placewebUrl = place.url!
             let placeDesc = place.description!
+            let placeShortDesc = place.shortDesc!
             
-            // #selector
-            self.AddToFavorite(name: placeName, address: placeAddress, imageUrl: placeImageUrl, latitude: placeLatitude, longitude: placeLongitude, urlToVideo: placeUrlToVideo, webUrl: placewebUrl, description: placeDesc)
+         // check if element exist
+            
+            let eleExist = CoreDataManager.checkIfExist(Name: placeName, address: placeAddress)
+            if eleExist {
+                print("element already exist")
+                
+            }else {
+                // #selector
+                self.AddToFavorite(name: placeName, address: placeAddress, imageUrl: placeImageUrl, latitude: placeLatitude, longitude: placeLongitude, urlToVideo: placeUrlToVideo, webUrl: placewebUrl, description: placeDesc, shortDesc: placeShortDesc)
+            }
         }
         favoriteButton.backgroundColor = UIColor.orange
         return [favoriteButton]
     }
     
     // favorite's button #selector
-    func AddToFavorite(name: String, address: String, imageUrl: String, latitude: String, longitude: String, urlToVideo: String, webUrl: String, description: String){
-        CoreDataManager.saveFavoritePlace(name: name, address: address, imageURL: imageUrl, latitude: latitude, longitude: longitude, urlToVideo: urlToVideo, webUrl: webUrl, description: description)
+    func AddToFavorite(name: String, address: String, imageUrl: String, latitude: String, longitude: String, urlToVideo: String, webUrl: String, description: String, shortDesc: String){
+        
+        CoreDataManager.saveFavoritePlace(name: name, address: address, imageURL: imageUrl, latitude: latitude, longitude: longitude, urlToVideo: urlToVideo, webUrl: webUrl, description: description, shortDesc: shortDesc)
         maintableView.reloadData()
     }
 }

@@ -9,15 +9,16 @@
 import Foundation
 
 class Place {
-    var name, latitude, longitude, url, urlToImage, address, description, urlToVideo: String?
+    var name, latitude, longitude, url, urlToImage, address, shortDesc, description, urlToVideo: String?
     
-    init(name: String?, latitude: String?, longitude: String?, url: String?, urlToImage: String?, address: String?, description: String?, urlToVideo: String?) {
+    init(name: String?, latitude: String?, longitude: String?, url: String?, urlToImage: String?, address: String?, shortDesc: String? ,description: String?, urlToVideo: String?) {
         self.name = name!
         self.latitude = latitude!
         self.longitude = longitude!
         self.url = url!
         self.urlToImage = urlToImage!
         self.address = address!
+        self.shortDesc = shortDesc!
         self.description = description!
         self.urlToVideo = urlToVideo!
     }
@@ -29,6 +30,7 @@ class Place {
         self.url = jsonDictionary["url"] as? String
         self.urlToImage = jsonDictionary["urlToImage"] as? String
         self.address = jsonDictionary["address"] as? String
+        self.shortDesc = jsonDictionary["shortDesc"] as? String
         self.description = jsonDictionary["description"] as? String
         self.urlToVideo = jsonDictionary["urlToVideo"] as? String
     }

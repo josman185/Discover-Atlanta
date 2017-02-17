@@ -8,26 +8,56 @@
 
 import UIKit
 
-class LogOutViewController: UIViewController {
+class LogOutViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var imageLbl: UIImageView!
+    
+    let loginButton: FBSDKLoginButton = {
+        let button = FBSDKLoginButton()
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (FBSDKAccessToken.current()) != nil{
-            fetchProfile()
-        }
+        self.view.addSubview(loginButton)
+        loginButton.center = self.view.center
+        loginButton.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func buttonLogOutPressed(_ sender: AnyObject) {
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController")
-        self.present(VC!, animated: true, completion: nil)
+    func loadLogInView(){
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let TabBarVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.present(TabBarVC, animated: false, completion: nil)
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        //user just logged in
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        loadLogInView() //user just logged out
+    }
+    
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        //print("loginButtonWillLogin")
+        return true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (FBSDKAccessToken.current()) != nil{
+            fetchProfile()
+        }else{
+            loadLogInView()
+        }
     }
     
     func fetchProfile(){
@@ -50,7 +80,7 @@ class LogOutViewController: UIViewController {
                     
                     if (url != "") {
                         DispatchQueue.global(qos: .userInitiated).async {
-                            let img = Downloader.downloadImageWithURL(url)
+                            let img = ImageDownloader.withURL(url)
                             DispatchQueue.main.async {
                                 self.imageLbl.image = img
                             }
